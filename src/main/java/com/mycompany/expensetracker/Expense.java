@@ -36,6 +36,6 @@ public class Expense {
     @Override
     public String toString() {
         return date + " | " + description + " | $" + amount;
-        // toString() method to display expense details
+        // Overriding a superclass method
     }
 }
