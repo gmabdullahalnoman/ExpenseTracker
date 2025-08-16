@@ -16,17 +16,20 @@ public class ExpenseTracker {
     public static void main (String agrs[]){
         
         Scanner input = new Scanner(System.in);
-        System.out.println("\n>>>>> Expense Tracker <<<<<\n");
+        boolean running = true;
+        
+            while (running) {
+            System.out.println("\n>>>>> Expense Tracker <<<<<\n");
+            System.out.println("Here are options to choose : ");
             System.out.println("1. Add Expense");
             System.out.println("2. View Expenses");
             System.out.println("3. Show Total Expense");
             System.out.println("4. Exit");
-            System.out.print("Choose an option: ");
+            System.out.print("Choose an option : \n");
             int choice = input.nextInt();
             input.nextLine();
             
-            boolean running = true;
-            while (running) {
+            
             switch (choice){
                 case 1:
                     addExpense(input);
@@ -46,21 +49,23 @@ public class ExpenseTracker {
         }    
     }
     private static void addExpense(Scanner input){
-        System.out.println("Enter description of expense");
+        System.out.println("Enter description of expense : ");
         String description = input.nextLine();
-        System.out.println("Enter the amount of expense");
+        System.out.println("Enter the amount of expense : ");
         double amount = input.nextDouble();
-        System.out.println("Enter the date and month of expense");
+        input.nextLine();
+        System.out.println("Enter the date and month (DD/MM) : ");
         String date = input.nextLine();
+        
         
         Expense anExpense = new Expense(amount, description, date);
                 myExpenses.add(anExpense);
                 
-                System.out.println("Expense added successfully");
+                System.out.println("Expense added successfully!");
     }
     private static void viewExpense(){
         if(myExpenses.isEmpty()){
-            System.out.println("No expenses added yet");
+            System.out.println("No expenses added yet!");
         }else{
             for(Expense anExpenses : myExpenses){
             System.out.println(anExpenses);
