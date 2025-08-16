@@ -11,16 +11,12 @@ Features
 3.	View all expenses history with description and amount.
 4.	Show total expense.
 
-Tools 
-●	Macbook Pro Mid-15
-●	Apache Netbeans
-●	Data we need - Arraylist
 
 Milestones
 
 i.	When the program runs :
 Show a menu - 
-	1.	Add expense
+	1.	Add expense 
 	2.	View expense
 	3.	Show total expense
 	4.	Exit
